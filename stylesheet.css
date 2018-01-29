@@ -1,0 +1,97 @@
+/*----- NAVIGATION -----------------------------------------------------------*/
+nav {
+  text-align: center;
+  padding-bottom: 32px;
+}
+
+nav h1 {
+  font-size: 24pt;
+  display: block;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline;
+  -webkit-padding-start: 0; /* overriding this fixes an off-centering issue on chrome */
+}
+
+nav li {
+  display: inline-block;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: -4px; /*inline-block padding adjustment*/
+}
+
+nav li a {
+  font-size: 14pt;
+  text-decoration: none;
+}
+
+/*----- COMIC PAGE -----------------------------------------------------------*/
+.title h1 {
+  text-align: center;
+}
+
+.comic {
+  margin: auto;
+  width: 65%;
+}
+
+.comic img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 5px 10px #333333;
+}
+
+/*----- COMIC NAVIGATION -----------------------------------------------------*/
+.pagenav {
+  text-align: center;
+  padding: 20px;
+}
+
+.pagenav ul {
+  list-style: none;
+  -webkit-padding-start: 0; /* overriding this fixes an off-centering issue on chrome */
+}
+
+.pagenav li {
+  display: inline;
+  margin-right: -4px; /*inline-block padding adjustment*/
+}
+
+.pagenav a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14pt;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*----- FOOTER ---------------------------------------------------------------*/
+.spacer {
+  height: 80px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer ul {
+  padding-right: 24px;
+  float: right;
+  list-style: none;
+}
+
+footer li {
+  display: inline;
+}
+
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
