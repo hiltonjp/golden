@@ -273,7 +273,7 @@ textarea {
 }
 
 footer {
-  position:absolute;
+  position:fixed;
   bottom:0;
   width:100%;
   height:45px;   /* Height of the footer */
@@ -281,7 +281,6 @@ footer {
 }
 
 footer ul {
-  padding-right: 24px;
   text-align: center;
   list-style: none;
 }
@@ -310,6 +309,35 @@ ul {
 
 /*----- RESPONSIVE DESIGN ----------------------------------------------------*/
 @media screen and (max-width: 960px) {
+  .small_title {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+    font-weight: normal;
+    font-size: 32pt;
+    color: black;
+    display: block;
+  }
+
+  .norm_title {
+    display: none;
+  }
+
+  nav li {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  nav li a {
+    font-size: 12pt;
+    padding: 2px 8px;
+  }
+
+
+  nav h1 a {
+    font-size: 48pt;
+  }
 
   /*---- FORM -----*/
   label {
@@ -339,9 +367,9 @@ ul {
   }
 
   .bio_pic {
-    float: left;
+    float: none;
     width: 170px;
-    height: auto;
+    margin: auto;
     padding: 24px 24px;
   }
 
@@ -355,7 +383,7 @@ ul {
 
   /*----- COMICS -----*/
   .title {
-    font-size: 24pt;
+    font-size: 16pt;
   }
 
   .comic {
@@ -367,13 +395,13 @@ ul {
   }
 
   .pagenav li {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 1%;
+    padding-right: 1%;
   }
 
   .pagenav a {
     font-weight: bold;
-    font-size: 32pt;
+    font-size: 16pt;
     color: white;
     border-radius: 4px;
     background-color: #ff0000;
@@ -390,7 +418,7 @@ ul {
   }
 
   .column a {
-    font-size: 32pt;
+    font-size: 20pt;
   }
 
   /*----- FOOTER -----*/
@@ -409,30 +437,11 @@ ul {
   footer ul {
     float: none;
     text-align: center;
-    font-size: 16pt;
+    font-size: 12pt;
   }
 }
 
-@media screen and (max-width: 780px) {
-  .small_title {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    text-decoration: none;
-    font-family: 'Indie Flower', cursive;
-    font-weight: normal;
-    font-size: 32pt;
-    color: black;
-    display: block;
-  }
-
-  nav h1 a {
-    font-size: 48pt;
-  }
-
-  .norm_title {
-    display: none;
-  }
-
+@media screen and (max-width: 500px) {
   .comic {
     width: 100%;
   }
@@ -444,6 +453,10 @@ ul {
   .comics_list {
     display: block;
     margin: auto;
-    width: 70%;
+    width: 80%;
+  }
+
+  footer {
+    position: static;
   }
 }
