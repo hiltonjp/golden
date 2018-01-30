@@ -308,7 +308,7 @@ ul {
 }
 
 /*----- RESPONSIVE DESIGN ----------------------------------------------------*/
-@media screen and (min-height: 1080px) {
+@media screen and (min-height: 768px) {
   footer {
     position: fixed;
   }
