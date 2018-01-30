@@ -309,7 +309,7 @@ ul {
 }
 
 /*----- RESPONSIVE DESIGN ----------------------------------------------------*/
-@media screen and (max-width: 960dpi) {
+@media screen and (max-width: 960px) {
 
   /*---- FORM -----*/
   label {
@@ -413,7 +413,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 780dpi) {
+@media screen and (max-width: 780px) {
   .small_title {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
