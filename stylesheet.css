@@ -5,13 +5,22 @@ html, body {
   background-color: #fafafa;
 }
 
+.container {
+  min-height:100%;
+  position:relative;
+}
+
 /*----- NAVIGATION -----------------------------------------------------------*/
 nav {
   text-align: center;
   padding-bottom: 32px;
 }
 
-nav h1 {
+.small_title {
+  display: none;
+}
+
+.norm_title {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
 }
@@ -161,7 +170,7 @@ img {
 .comics_list {
   display: grid;
   grid-template-columns: auto auto;
-  width: 40%;
+  width: 70%;
   margin: auto;
 }
 
@@ -176,7 +185,7 @@ img {
 .column a {
   text-decoration: none;
   font-family: 'Indie Flower', cursive;
-  font-size: 16pt;
+  font-size: 24pt;
   font-weight: normal;
   color: black;
 }
@@ -207,24 +216,73 @@ img {
   padding-right: 10px;
 }
 
-/*----- CONTACT FORM ---------------------------------------------------------*
+/*----- CONTACT FORM ---------------------------------------------------------*/
+form {
+	margin: 0 auto;
+	width: 80%;
+	padding: 1em;
+	border: 2px solid #ff0000;
+  background-color:  #ff8888;
+  box-shadow: 0px 5px 8px #333333;
+	border-radius: 8px;
+}
+
+form div + div {
+	margin-top: 1em;
+}
+
+label {
+	vertical-align: top;
+	display: inline-block;
+	width: 90px;
+	text-align: right;
+	font-family: 'Quicksand', sans-serif;
+  font-weight: bold;;
+	color: black;
+}
+
+input, textarea {
+	font-family: 'Quicksand', sans-serif;
+  width: 80%;
+	padding: 4px 4px;
+}
+
+#btn_div {
+	width: 30%;
+  margin: auto;
+}
+
+#btn {
+}
+
+textarea {
+	height: 10em;
+}
 
 /*----- FOOTER ---------------------------------------------------------------*/
 .spacer {
   height: 80px;
 }
 
+.norm_footer {
+  display: block;
+}
+
+.small_footer {
+  display: none;
+}
+
 footer {
-  height: 45px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:45px;   /* Height of the footer */
   background-color: #fafafa;
 }
 
 footer ul {
   padding-right: 24px;
-  float: right;
+  text-align: center;
   list-style: none;
 }
 
@@ -242,5 +300,150 @@ footer a {
   color: black;
 }
 
+ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0;
+}
 
 /*----- RESPONSIVE DESIGN ----------------------------------------------------*/
+@media screen and (max-width: 960px) {
+
+  /*---- FORM -----*/
+  label {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+
+  input, textarea {
+    width: 100%;
+  	padding: 4px 4px;
+  }
+
+  /*----- HOME -----*/
+  .welcome_photo {
+    width: 100%;
+  }
+
+  /*----- BIOGRAPHIES -----*/
+  .biographies {
+    grid-template-columns: auto;
+    grid-row-gap: 10px;
+  }
+
+  .border {
+    display: block;
+  }
+
+  .bio_pic {
+    float: left;
+    width: 170px;
+    height: auto;
+    padding: 24px 24px;
+  }
+
+  .bio h1 {
+    text-align: center;
+  }
+
+  .bio_info {
+    padding-left: 24px;
+  }
+
+  /*----- COMICS -----*/
+  .title {
+    font-size: 24pt;
+  }
+
+  .comic {
+    width: 100%;
+  }
+
+  .comic_wide {
+    width: 100%;
+  }
+
+  .pagenav li {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .pagenav a {
+    font-weight: bold;
+    font-size: 32pt;
+    color: white;
+    border-radius: 4px;
+    background-color: #ff0000;
+    box-shadow: 0px 2px 3px #995555;
+  }
+  /*----- ARCHIVE -----*/
+  .comics_list {
+    grid-template-columns: auto;
+    grid-column-gap: 0;
+  }
+
+  .column {
+    margin: 0;
+  }
+
+  .column a {
+    font-size: 32pt;
+  }
+
+  /*----- FOOTER -----*/
+  .norm_footer {
+    display: none;
+  }
+
+  .small_footer {
+    display: block;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer ul {
+    float: none;
+    text-align: center;
+    font-size: 16pt;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .small_title {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    text-decoration: none;
+    font-family: 'Indie Flower', cursive;
+    font-weight: normal;
+    font-size: 32pt;
+    color: black;
+    display: block;
+  }
+
+  nav h1 a {
+    font-size: 48pt;
+  }
+
+  .norm_title {
+    display: none;
+  }
+
+  .comic {
+    width: 100%;
+  }
+
+  .comic_wide {
+    width: 100%;
+  }
+
+  .comics_list {
+    display: block;
+    margin: auto;
+    width: 70%;
+  }
+}
