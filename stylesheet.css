@@ -65,6 +65,12 @@ nav li a {
 }
 
 /*----- HOME PAGE ------------------------------------------------------------*/
+.intro {
+  font-family: 'Quicksand', sans-serif;
+  color: black
+  font-size: 12pt;
+}
+
 .welcome_photo {
   margin: auto;
   width: 62%;
@@ -143,7 +149,7 @@ img {
 
 .comic {
   margin: auto;
-  width: 62%;
+  width: 40%;
 }
 
 .comic_wide {
@@ -167,6 +173,10 @@ img {
 
 /*----- ARCHIVE LIST ---------------------------------------------------------*/
 
+.archive_title {
+  font-size: 24pt;
+}
+
 .comics_list {
   display: grid;
   grid-template-columns: auto auto;
@@ -188,6 +198,10 @@ img {
   font-size: 24pt;
   font-weight: normal;
   color: black;
+}
+
+.column a:hover {
+  color: #ff0040;
 }
 
 /*----- COMIC NAVIGATION -----------------------------------------------------*/
