@@ -1,0 +1,435 @@
+html {
+  background-color:#006600;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 700px;
+}
+
+.content {
+  min-height:100%;
+  height: 100%;
+  position:relative;
+  text-align: center;
+}
+
+.page {
+  margin: auto;
+  width: 90%;
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -20px;
+}
+
+.full {
+  width: 100%;
+}
+
+#comic_viewer {
+  margin: auto;
+  text-align: center;
+}
+
+/*----- NAVIGATION -------------------------------------------------------------------------------*/
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    padding-top: 20px;
+    position: relative;
+    top: -8px;
+    background-color: #ffcccc;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px #00000088;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: inline-block;
+  color: #FF0000;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 10pt;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0px 20px 10px;
+  padding: 6px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #FF0000;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #FF0000;
+    color: white !important;
+    border-radius: 4px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+.main {
+  font-family: 'Indie Flower', cursive !important;
+  font-weight: normal !important;
+  font-size: 32pt !important;
+  color: black !important;
+  padding-bottom: 4px !important;
+}
+
+.main:hover {
+  background-color: #00000000 !important;
+  color: black !important;
+}
+
+.mobi {
+  display: none !important;
+}
+
+.norm {
+  display: inline-block !important;
+}
+
+/*----- MAIN PAGE --------------------------------------------------------------------------------*/
+.welcome {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  top: 0;
+}
+
+.welcome img {
+  min-width: 100%;
+  max-width: none;
+  margin: auto;
+}
+
+#joke_getter {
+  text-align: center;
+  margin-top: 180px;
+}
+
+.box {
+  display: inline-block;
+  background-color: #008800;
+  border: 2px solid #006600;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 3px #00000088;
+}
+
+.whoFrom {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 16pt;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.joke {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 12pt;
+  color: white;
+  margin: 4px;
+}
+
+#joke_btn {
+  width: 120px;
+  height: 40px;
+  background-color: #008800;
+  border: 2px solid #006600;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12pt;
+  font-weight: bolder;
+  color: white;
+  box-shadow: 0px 3px 3px #00000088;
+}
+
+#joke_btn:hover {
+  background-color: #006600;
+  border: 2px solid #004400;
+}
+
+#joke_btn:active {
+  transform: translateY(2px);
+}
+/*----- COMIC PAGE -------------------------------------------------------------------------------*/
+#comic_title {
+  font-family: 'Indie Flower', cursive;
+  font-weight: normal;
+  text-align: center;
+  font-size: 40pt;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+
+#comic {
+  padding: 12px;
+  background-color: #004400;
+  border-radius: 8px;
+  box-shadow: 0px 3px 3px #00000088;
+}
+
+#comic_nav {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 16px 32px;
+  position: relative;
+  background-color: #ffdddd;
+  border-radius: 8px;
+  box-shadow: 0px 3px 3px #00000088;
+}
+
+#jump_field {
+  width: 55px;
+  padding: 10px 10px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #AAAAAA;
+  text-align: center;
+}
+
+.nav_btn {
+  width: 70px;
+  height: 30px;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12pt;
+  font-weight: bolder;
+  color: white;
+}
+
+.nav_btn:hover {
+  background-color: #BB0000;
+}
+
+.nav_btn:active {
+  transform: translateY(2px);
+}
+
+.disabled {
+  background-color: #DD6666;
+}
+
+.disabled:hover {
+  background-color: #DD6666;
+}
+
+.disabled:active{
+  background-color: #DD6666;
+}
+
+button:focus { outline: 0; }
+
+/*----- SUGGESTIONS ------------------------------------------------------------------------------*/
+#suggestion_box {
+  text-align: center;
+}
+
+#commentBox {
+  width: 640px;
+}
+
+#suggestionForm {
+  text-align: left;
+}
+
+.input {
+  border-radius: 4px;
+  border: 1px solid #AAAAAA;
+  background-color: #EEEEEE;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12pt;
+  padding: 4px;
+  margin: 10px 0px;
+}
+
+.wide {
+  width: 98%;
+  height: 3rem;
+}
+
+#nameInput {
+  width: 200px;
+}
+
+.suggestion {
+  width: 640px;
+  text-align: left;
+}
+
+#averageRating {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 12pt;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+#invalid {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 12pt;
+  margin-bottom: 3px;
+  margin-top: 12px;
+}
+
+#sendMessage {
+  background-color: #00AA00;
+  border: none;
+  width: 70px;
+  height: 24px;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 10pt;
+}
+
+#sendMessage:hover {
+  background-color: #009900;
+}
+
+#sendMessage:active {
+  transform: translateY(2px);
+}
+
+#sendMessage:focus {outline: 0;}
+
+.header {
+  margin: 20px;
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bolder;
+  font-size: 32pt;
+  color: black;
+  display: block;
+}
+
+/*----- CHARACTERS -------------------------------------------------------------------------------*/
+#char_module {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#character {
+  margin: 20px;
+  display: inline-block;
+  background-color: #008800;
+  border: 2px solid #006600;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 3px #00000088;
+}
+
+#infoBox {
+  text-align: left;
+  width: 360px;
+}
+
+#charName {
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-weight: normal;
+  font-size: 22pt;
+  margin-bottom: 10px;
+}
+
+#charDesc {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+}
+
+#char_nav {
+  display: inline-block;
+  padding: 10px 70px;
+  margin-top: 8px;
+  position: relative;
+  background-color: #ffdddd;
+  border-radius: 8px;
+  box-shadow: 0px 3px 3px #00000088;
+}
+
+.charSelect {
+  width: 180px;
+  height: 30px;
+  background-color: #008800;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  color: white;
+  padding-left: 4px;
+  margin-top: 12px;
+  box-shadow: 0px 3px 3px #00000088;
+}
+
+.charSelect:focus {outline: 0;}
+
+/*----- FOOTER -----------------------------------------------------------------------------------*/
+.spacer {
+  height: 40px;
+}
+
+footer {
+  display: block;
+  -ms-align-self: baseline;
+  align-self: baseline;
+  align-items: baseline;
+
+  width:100%;
+  background:#004400;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bolder;
+  font-size: 12pt;
+
+  display: inline-block;
+  padding: 10px;
+  margin: 0px 10px;
+  align-self: center;
+}
+
+.green {
+  background: #004400;
+}
+
+.green ul li a {
+  color: white;
+}

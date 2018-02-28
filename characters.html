@@ -1,69 +1,66 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <title>Characters</title>
+    <meta charset="utf-8">
+    <title>Golden: Characters</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheet.css"/>
+    <link rel="stylesheet" href="/reset.css"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/mobi.css"/>
+    <script src="/responsive.js"></script>
   </head>
   <body>
     <div class="content">
-      <nav>
-        <h1 class="small_title"><a href="/index.html">Golden</a></h1>
-        <h1 class="norm_title"><a href="/index.html">Golden: Chronicles of the Hastening</a></h1>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/archive.html">Archive</a></li>
-          <li><a class="active" href="/characters.html">Characters</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="biographies"> <!-- grid container -->
-
-        <div class="bio_frame" id="phillips">
-          <div class="border">
-            <div class="bio_pic">
-              <img src="/image/phillips_bio.jpg"/>
-            </div>
-            <div class="bio">
-              <h1 class="char_name">Elder Wade Phillips</h1>
-              <p class="bio_info">Elder Phillips has a love for the rules and regulations of the mission. His willingness to work hard, be obedient, and listen to the spirit has helped him out a lot in the past. But, his inflexibility tends to make him harder to get along with, and his shy nature tends to get in the way of getting to know people.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bio_frame" id="herbie">
-          <div class="border">
-            <div class="bio_pic">
-              <img src="/image/herbie_bio.jpg"/>
-            </div>
-            <div class="bio">
-              <h1 class="char_name">Elder Jimmy Herbie</h1>
-              <p class="bio_info">Elder Herbie is first and foremost a people person. While he has some trouble staying focused, and isn't the most obedient missionary, his infectious positive attitude, love for the people, and easy-going personality still makes him an effective missionary.</p>
-            </div>
-          </div>
-
-        </div>
+      <div class="topnav" id="myTopnav">
+        <a href="/index.html" class="main norm">Golden: Chronicles of the Hastening</a>
+        <a href="/index.html" class="main mobi">Golden</a>
+        <br>
+        <a href="/index.html">Home</a>
+        <a href="/comic.html">Comics</a>
+        <a href="/characters.html" class="active">Characters</a>
+        <a href="/suggestions.html">Suggestions</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
 
 
+
+      <div class="page full">
+        <div class="welcome">
+          <img src="/image/rainbow_road.jpg"/>
+        </div>
+        <div id="char_module">
+          <img id="character" v-bind:src="image"/>
+          <br>
+          <div class="box" id="infoBox">
+            <h1 id="charName">{{name}}</h1>
+            <p id="charDesc">{{description}}</p>
+          </div>
+          <br>
+          <select id="charOptions" class="charSelect" v-model="which">
+            <option v-for="(char, index) in characters" :value="index" v-on:change="setWhich(index)">{{char.name}}</option>
+          </select>
+        </div>
+      </div>
+
       <div class="spacer"></div>
-      <footer class = "norm_footer">
+      <footer class="norm">
         <ul>
           <li><a href="https://www.lds.org/?lang=eng">LDS Church Website</a></li>
           <li><a href="https://github.com/hiltonjp/golden">GitHub Repository</a></li>
           <li><a href="https://www.facebook.com/chroniclesofthehastening/">Golden: The Facebook Page</a></li>
         </ul>
       </footer>
-      <footer class = "small_footer">
+      <footer class="mobi">
         <ul>
           <li><a href="https://www.lds.org/?lang=eng">LDS.org</a></li>
-          <li><a href="https://github.com/hiltonjp/golden">Repository</a></li>
-          <li><a href="https://www.facebook.com/chroniclesofthehastening/">Facebook Page</a></li>
+          <li><a href="https://github.com/hiltonjp/golden">Repo</a></li>
+          <li><a href="https://www.facebook.com/chroniclesofthehastening/">Facebook</a></li>
         </ul>
       </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="/characters.js"></script>
   </body>
 </html>
