@@ -82,7 +82,7 @@ var comic_viewer = new Vue({
     loadComic: function() {
       this.loading = true;
       let comic = this.comics[this.number]
-      this.image = "/image/" + comic.src;
+      this.image = "image/" + comic.src;
       this.title = "#" + this.number + ": " + comic.title;
       this.loading = false;
     },
