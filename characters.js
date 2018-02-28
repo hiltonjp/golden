@@ -44,7 +44,7 @@ var char_module = new Vue({
   methods: {
     loadCharacter: function() {
       let character = this.characters[this.which];
-      this.image = "/image/" +  character.image;
+      this.image = "image/" +  character.image;
       this.name = character.name;
       this.description = character.description;
     },
