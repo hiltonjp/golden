@@ -2,52 +2,69 @@
 
 <html>
   <head>
-    <title>Golden</title>
+    <title>Golden: Home</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheet.css"/>
+    <link rel="stylesheet" href="/reset.css"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/mobi.css"/>
+    <script src="/responsive.js"></script>
   </head>
   <body>
     <div class="content">
-      <nav class="norm">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/comic.html">Comics</a></li>
-          <li><a href="/characters.html">Characters</a></li>
-          <li><a href="/contact.html">Email Me</a></li>
-        </ul>
-      </nav>
-      <nav class="mobi">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/comic.html">Comics</a></li>
-          <li><a href="/characters.html">Characters</a></li>
-          <li><a href="/contact.html">Email Me</a></li>
-        </ul>s
-      </nav>
-
-      <div class="norm welcome">
-        <img src="/image/rainbow_road.jpg"/>
+      <div class="topnav" id="myTopnav">
+        <a href="/index.html" class="main norm">Golden: Chronicles of the Hastening</a>
+        <a href="/index.html" class="main mobi">Golden</a>
+        <br>
+        <a href="/index.html" class="active">Home</a>
+        <a href="/comic.html">Comics</a>
+        <a href="/characters.html">Characters</a>
+        <a href="/suggestions.html">Suggestions</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-      <div class="mobi welcome">
-        <img src="/image/the_elders.jpg"/>
+
+      <div class="page full">
+        <div class="welcome">
+          <img src="/image/rainbow_road.jpg"/>
+        </div>
+
+        <div id="joke_getter">
+          <div class="if_else" v-if="loading">
+            <div class="box">
+              <p class="joke">Cracking a Wise One...</p>
+            </div>
+          </div>
+          <div class="if_else" v-else>
+            <div class="box">
+              <h1 v-if="phillipsJoke" class="whoFrom">A Joke From Elder Phillips:</h1>
+              <h1 v-else class="whoFrom">A Joke From Elder Herbie:</h1>
+              <p class="joke">"{{setup}}"</p>
+              <p class="joke">"{{punchline}}"</p>
+            </div>
+            <br>
+            <button id="joke_btn" v-on:click="crackAWiseOne">Another Joke!</button>
+          </div>
+        </div>
       </div>
 
       <div class="spacer"></div>
-      <footer class = "norm">
+      <footer class="norm">
         <ul>
           <li><a href="https://www.lds.org/?lang=eng">LDS Church Website</a></li>
           <li><a href="https://github.com/hiltonjp/golden">GitHub Repository</a></li>
           <li><a href="https://www.facebook.com/chroniclesofthehastening/">Golden: The Facebook Page</a></li>
         </ul>
       </footer>
-      <footer class = "mobi">
+      <footer class="mobi">
         <ul>
           <li><a href="https://www.lds.org/?lang=eng">LDS.org</a></li>
-          <li><a href="https://github.com/hiltonjp/golden">Repository</a></li>
-          <li><a href="https://www.facebook.com/chroniclesofthehastening/">Facebook Page</a></li>
+          <li><a href="https://github.com/hiltonjp/golden">Repo</a></li>
+          <li><a href="https://www.facebook.com/chroniclesofthehastening/">Facebook</a></li>
         </ul>
       </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+      <script src="/jokes.js"></script>
     </div>
   </body>
 </html>

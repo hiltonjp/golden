@@ -1,0 +1,104 @@
+@media screen and (max-width:705px) {
+  /*----- NAVIGATION ---------------------------------------------------------------------*/
+  .topnav {
+    display: block;
+    border-radius: 0;
+  }
+
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: 24pt;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    font-size: 24pt;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .norm {
+    display: none !important;
+  }
+
+  .mobi {
+    display: block !important;
+  }
+
+  .main.mobi {
+    display: inline-block !important;
+  }
+
+  .page {
+    text-align: center;
+  }
+
+/*----- HOME PAGE --------------------------------------------------------------------------------*/
+  .box {
+    max-width: 90%;
+  }
+
+  #joke_getter {
+    width: 90%;
+    display: inline-block;
+  }
+
+/*----- COMIC NAVIGATION -------------------------------------------------------------------------*/
+  #comic {
+    max-width: 85%;
+  }
+
+  #comic_nav {
+    padding: 16px 20px;
+  }
+
+  .nav_btn {
+    width: 60px;
+    height: 25px;
+    font-size: 12pt;
+  }
+
+  #jump_field {
+    width: 35px;
+    padding: 5px 5px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid #AAAAAA;
+    text-align: center;
+  }
+
+/*----- CHARACTERS -------------------------------------------------------------------------------*/
+  #infoBox {
+    width: 85%;
+  }
+
+  #char_module {
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+/*----- CHARACTERS -------------------------------------------------------------------------------*/
+  #suggestion_box {
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+
+  footer.mobi{
+    text-align: center;
+  }
+}

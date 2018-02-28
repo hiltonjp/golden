@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Golden: Contact</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="/reset.css"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link rel="stylesheet" href="/mobi.css"/>
+    <script src="/responsive.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="topnav" id="myTopnav">
+        <a href="/index.html" class="main norm">Golden: Chronicles of the Hastening</a>
+        <a href="/index.html" class="main mobi">Golden</a>
+        <br>
+        <a href="/index.html">Home</a>
+        <a href="/comic.html">Comics</a>
+        <a href="/characters.html">Characters</a>
+        <a href="/suggestions.html" class="active">Suggestions</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+      <div class="page full">
+        <div class="welcome">
+          <img src="/image/rainbow_road.jpg"/>
+        </div>
+        <div id="suggestion_box">
+          <h3 class="header">Add a Comment</h3>
+          <div class="box" id="commentBox">
+            <form action="https://formspree.io/jerrodstorm.comics@gmail.com" method="POST" id="suggestionForm" v-on:submit.prevent="addComment">
+              <star-rating v-bind:star-size="30"
+                             v-model="rating"
+                             active-color="#ff8800"
+                             inactive-color="#ffcc88"
+                             v-bind:increment="0.5"
+                             v-bind:show-rating="false"
+                             name="rating"></star-rating>
+              <p id="averageRating">Average Rating:  {{average}}</p>
+              <input class="input" id="nameInput" v-model="addedName" placeholder="Name" name="name"/>
+              <br/>
+              <textarea class="input wide" id="overall" v-model="overall" placeholder="How do you like my comics? (This will be displayed as a review)" name="overall"></textarea>
+              <br/>
+              <textarea class="input wide" id="website" v-model="website" placeholder="How's my website looking? (This will be sent to me!)" name="website"></textarea>
+              <br/>
+              <textarea class="input wide" id="idea" v-model="idea" placeholder="Got a funny idea for a comic? (This will be sent to me!)" name="idea"></textarea>
+              <br/>
+              <input type="submit" id="sendMessage" value="Submit"></button>
+              <p id="invalid" v-if="unfilled">(Add at least a name and comic review before submitting)</p>
+            </form>
+          </div>
+          <br>
+
+          <h3 class="header">Comments</h3>
+          <div v-for="comment in comments">
+            <div class="box suggestion">
+              <star-rating v-bind:star-size="20"
+                           v-bind:rating="comment.rating"
+                           v-bind:read-only="true"
+                           active-color="#ff8800"
+                           inactive-color="#ffcc88"
+                           v-bind:show-rating="false"
+                           v-bind:round-start-rating="false"></star-rating>
+              <p>"{{comment.overall}}"</p>
+              <p><i>- {{comment.author}}</i></p>
+              <p>{{day}}, {{month}} {{date}}, {{year}}</p>
+            </div>
+        </div>
+      </div>
+
+      </div>
+      <div class="spacer"></div>
+      <footer class="norm">
+        <ul>
+          <li><a href="https://www.lds.org/?lang=eng">LDS Church Website</a></li>
+          <li><a href="https://github.com/hiltonjp/golden">GitHub Repository</a></li>
+          <li><a href="https://www.facebook.com/chroniclesofthehastening/">Golden: The Facebook Page</a></li>
+        </ul>
+      </footer>
+      <footer class="mobi">
+        <ul>
+          <li><a href="https://www.lds.org/?lang=eng">LDS.org</a></li>
+          <li><a href="https://github.com/hiltonjp/golden">Repo</a></li>
+          <li><a href="https://www.facebook.com/chroniclesofthehastening/">Facebook</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
+    <script src="/suggestions.js"></script>
+  </body>
+</html>

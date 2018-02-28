@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <title>Golden: Comics</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+    <meta charset="utf-8">
+    <title>Golden: Characters</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="/reset.css"/>
     <link rel="stylesheet" href="/styles.css"/>
@@ -16,36 +16,30 @@
         <a href="/index.html" class="main norm">Golden: Chronicles of the Hastening</a>
         <a href="/index.html" class="main mobi">Golden</a>
         <br>
-        <a href="/index.html" >Home</a>
-        <a href="/comic.html"class="active">Comics</a>
-        <a href="/characters.html">Characters</a>
+        <a href="/index.html">Home</a>
+        <a href="/comic.html">Comics</a>
+        <a href="/characters.html" class="active">Characters</a>
         <a href="/suggestions.html">Suggestions</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
+
 
 
       <div class="page full">
         <div class="welcome">
           <img src="/image/rainbow_road.jpg"/>
         </div>
-        <div id="comic_viewer">
-          <div v-if="loading"></div>
-          <div v-else>
-            <h1 id="comic_title">{{title}}</h1>
-            <img v-bind:src="image" v-bind:alt="alt" id="comic"/>
-            <br>
-            <div id="comic_nav">
-              <button class="nav_btn" v-if="fewerComics" v-on:click="firstComic">first</button>
-              <button class="nav_btn disabled" v-else>first</button>
-              <button class="nav_btn" v-if="fewerComics" v-on:click="previousComic">prev</button>
-              <button class="nav_btn disabled" v-else>prev</button>
-              <input id="jump_field" v-model.number="jump_value" v-on:keyup.enter.prevent="gotoComic" v-bind:placeholder="jump_value"/>
-              <button class="nav_btn" v-if="moreComics" v-on:click="nextComic">next</button>
-              <button class="nav_btn disabled" v-else>next</button>
-              <button class="nav_btn" v-if="moreComics"  v-on:click="newestComic">last</button>
-              <button class="nav_btn disabled" v-else>last</button>
-            </div>
+        <div id="char_module">
+          <img id="character" v-bind:src="image"/>
+          <br>
+          <div class="box" id="infoBox">
+            <h1 id="charName">{{name}}</h1>
+            <p id="charDesc">{{description}}</p>
           </div>
+          <br>
+          <select id="charOptions" class="charSelect" v-model="which">
+            <option v-for="(char, index) in characters" :value="index" v-on:change="setWhich(index)">{{char.name}}</option>
+          </select>
         </div>
       </div>
 
@@ -65,8 +59,8 @@
         </ul>
       </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-star-rating/dist/star-rating.min.js"></script>
-    <script src="/comics.js"></script>
+    <script src="/characters.js"></script>
   </body>
 </html>
