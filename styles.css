@@ -48,7 +48,7 @@ img {
     padding-top: 20px;
     position: relative;
     top: -8px;
-    background-color: #ffcccc;
+    background-color: #ffeebb;
     border-radius: 8px;
     box-shadow: 0px 3px 3px #00000088;
 }
@@ -196,7 +196,7 @@ img {
   display: inline-block;
   padding: 16px 32px;
   position: relative;
-  background-color: #ffdddd;
+  background-color: #ffeebb;
   border-radius: 8px;
   box-shadow: 0px 3px 3px #00000088;
 }
@@ -372,7 +372,7 @@ button:focus { outline: 0; }
   padding: 10px 70px;
   margin-top: 8px;
   position: relative;
-  background-color: #ffdddd;
+  background-color: #ffeebb;
   border-radius: 8px;
   box-shadow: 0px 3px 3px #00000088;
 }
